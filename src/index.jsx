@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+import  { data } from "./mock-data.js";
 import "./index.css";
-import * as data from "./mock-data.json";
+import "./font/iconfont.css"
 
 class Page extends React.Component {
+  componentDidMount() {
+  this.inputChangeHanlder(JSON.stringify(data))
+  }
   render() {
     return (
       <div>
@@ -11,11 +16,10 @@ class Page extends React.Component {
           <div className="top-line-left">
             <div className="top-line-by">Createby</div>
             <a className="top-line-name" href="true">
-              <span className="-css">hardBra1n</span>
+              <span className="-css">op-chen</span>
             </a>
           </div>
           <a className="top-line-right" href="true">
-            {data}
           </a>
         </div>
 
@@ -24,8 +28,8 @@ class Page extends React.Component {
             id="json-src"
             className="content-left"
             placeholder="在此输入Json字符串..."
-            onKeyUp={($event) => this.inputChangeHanlder($event)}
-          ></textarea>
+            onKeyUp={($event) => this.inputChangeHanlder($event.target.value)}
+          >{ JSON.stringify(data)}</textarea>
           <div
             className="content-right"
             onKeyUp={() => this.outputChangeHandler()}
@@ -40,10 +44,10 @@ class Page extends React.Component {
   /**
    * JSON-#Src输入
    */
-  inputChangeHanlder(e) {
+  inputChangeHanlder(value) {
     try {
       document.querySelector("#json-target").innerHTML = this.JSONFormat(
-        e.target.value
+        value
       ).toString();
       document.querySelectorAll(".icon-zhedie1").forEach((item) => {
         const that = this;
