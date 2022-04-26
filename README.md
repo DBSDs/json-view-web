@@ -4,4 +4,4 @@
 基于React-cli,没有JQuery引入
 
 ## 在线查看
-预览地址：https://dbsds.github.io/json-view-web/build/。
+预览地址：https://dbsds.github.io/json-view-web/build
