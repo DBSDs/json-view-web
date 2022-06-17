@@ -3,9 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #root {
   width: 100%;
 }
+
 .top-line {
   display: flex;
   justify-content: space-between;
@@ -13,15 +15,18 @@ body {
   padding: 0 40px;
   border-bottom: 1px solid #ccc;
 }
+
 .top-line-left {
   display: flex;
   align-items: center;
 }
+
 .top-line-by {
   font-size: 24px;
   font-family: Menlo, Monaco, Consolas, "å¾®è½¯é›…é»‘";
   color: #555;
 }
+
 .top-line-name {
   font-family: Menlo, Monaco, Consolas, "å¾®è½¯é›…é»‘";
   text-decoration: none;
@@ -30,14 +35,22 @@ body {
   color: #0fd59d;
   padding: 10px;
 }
+
 .top-line-right {
   color: #ccc;
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    opacity: .6;
+    cursor: pointer;
+  }
 }
+
 .content {
   display: flex;
 }
+
 .content-left {
   flex: 2;
   height: 510px;
@@ -48,15 +61,18 @@ body {
   outline: none;
   resize: none;
 }
+
 .content-left:focus {
   border-color: #0fd59d;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #0fd59d;
 }
+
 #json-target {
   width: 98%;
   height: 99%;
 }
+
 .content-right {
   flex: 3;
   height: 510px;
@@ -66,14 +82,17 @@ body {
   max-height: 510px;
   overflow-y: auto;
 }
+
 .iconfont {
   font-size: 12px;
   margin-right: 4px;
 }
+
 .iconfont:hover {
   color: #0fd59d;
 }
-span{
-  font-family: menlo,monospace, Tahoma,"微软雅黑","幼圆";
+
+span {
+  font-family: menlo, monospace, Tahoma, "微软雅黑", "幼圆";
   font-size: 12px;
 }
